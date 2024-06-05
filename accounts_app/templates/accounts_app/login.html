@@ -1,0 +1,12 @@
+{% extends 'home_app/base.html' %}
+
+{% block content %}
+    <form  action="" method="post" class="mb-3" >
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <button type="submit">Login</button>
+
+
+    </form>
+{% endblock %}

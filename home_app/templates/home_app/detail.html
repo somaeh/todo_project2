@@ -1,0 +1,15 @@
+{% extends 'home_app/base.html' %}
+
+{% block content %} 
+
+    <a href="{% url 'home_app:delet_todo' todo.id %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'home_app:update_todo' todo.id %}" class="btn btn-info">Update</a>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <h3>{{ todo.title }}</h3>
+            <p>{{ todo.body }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

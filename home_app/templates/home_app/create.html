@@ -1,0 +1,30 @@
+{% extends 'home_app/base.html' %}
+
+{% block content %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create</title>
+    
+</head>
+<body>
+
+    <h3>wellcom</h3>
+    <form action = "" method = "POST" class="form-control">
+        {% csrf_token %}
+   
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary mb-3">send</button>
+    </form>
+        
+            
+      
+  
+   
+    
+</body>
+</html>
+{% endblock %}

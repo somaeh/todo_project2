@@ -1,0 +1,12 @@
+{% extends 'home_app/base.html' %}
+<div>
+
+{% block content %}
+    {% for user in form %}
+        {{ user.username }}<hr>
+    {% endfor %}
+
+    
+{% endblock %}
+</div>
+

@@ -1,0 +1,29 @@
+{% extends 'home_app/base.html' %}
+
+{% block content %} 
+  <div>
+    <a href="{% url 'home_app:create' %}" class="btn btn-info">add</a>
+  </div>
+  <div>
+  
+    {% if messages %}
+      {% for msg in messages %}
+        <p class="alert alert-{{ msg.tags }}">{{ msg }}</p>
+        
+      {% endfor %}
+    {% endif %}
+    
+  </div>
+
+    {% for todo in todos %}
+        <a  href="{% url 'home_app:detail_todos' todo.id %}">{{ todo.title }}</a><hr>
+       
+
+
+    {% endfor %}
+
+</div>
+{% endblock %}
+    
+    
+
